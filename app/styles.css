@@ -13,7 +13,7 @@
   
   /* header and navbar */
   header {
-    background-color: rgb(183, 164, 183);
+    background-color: rgb(175, 134, 175);
     display: flex;
     justify-content: space-between;
     padding: 25px;
@@ -132,14 +132,14 @@
   }
   
   /* footer */
-  /* .footer {
+  .footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgb(183, 164, 183);
+    background-color: rgb(175, 134, 175);
     border-top: 1px solid #eee;
     padding: 25px;
-  } */
+  }
   
   
   .copyright {

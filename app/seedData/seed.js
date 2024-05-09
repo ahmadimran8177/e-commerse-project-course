@@ -1,6 +1,5 @@
 // To seed data run "node seed.js" in terminal
 
-
 const { PrismaClient } = require("@prisma/client");
 let prisma;
 
@@ -12,7 +11,6 @@ if (process.env.NODE_ENV === "production") {
   }
   prisma = global.prisma;
 }
-
 
 const users = [
   {
@@ -33,21 +31,41 @@ const users = [
 ];
 
 const products = [
+  // {
+  //   id: 1,
+  //   name: "Basket Ball",
+  //   price: 40.0,
+  //   description: "A comfortable ball for playing",
+  //   imageUrl:
+  //     "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?format=webp&w=480&dpr=1.0",
+  //   category: "Clothing",
+  //   stock: 100,
+  // },
+  // // Add 9 more products with unique names, descriptions, and imageUrls
+  // {
+  //   id: 2,
+  //   name: "Coffee Brand",
+  //   price: 15.0,
+  //   description: "A ceramic and fantastic mug for your morning coffee",
+  //   imageUrl:
+  //     "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1707314527_4431294.jpg?format=webp&w=480&dpr=1.0",
+  //   category: "Kitchen",
+  //   stock: 60,
+  // },
   {
-    id: 1,
-    name: "Basket Ball",
-    price: 40.0,
+    id: 3,
+    name: "Cricket Bat",
+    price: 70.0,
     description: "A comfortable ball for playing",
     imageUrl:
       "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?format=webp&w=480&dpr=1.0",
     category: "Clothing",
-    stock: 100,
+    stock: 80,
   },
-  // Add 9 more products with unique names, descriptions, and imageUrls
   {
-    id: 2,
-    name: "Coffee Brand",
-    price: 15.0,
+    id: 4,
+    name: "Tea Brand",
+    price: 24.0,
     description: "A ceramic and fantastic mug for your morning coffee",
     imageUrl:
       "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1707314527_4431294.jpg?format=webp&w=480&dpr=1.0",
@@ -87,9 +105,9 @@ async function main() {
     await prisma.product.createMany({ data: product, skipDuplicates: true });
   }
 
-  for (const order of orders) {
-    await prisma.order.create({ data: order });
-  }
+  // for (const order of orders) {
+  //   await prisma.order.create({ data: order });
+  // }
 
   console.log("Seeding completed.");
 }
