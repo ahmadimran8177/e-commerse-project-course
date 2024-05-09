@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 const users = [
   {
     id: 1,
-    email: "user1@example.com",
+    email: "smith@smith.com",
     password: "password1",
     name: "John Doe",
     shippingAddress: "123 Main St",
@@ -35,9 +35,9 @@ const users = [
 const products = [
   {
     id: 1,
-    name: "T-Shirt",
-    price: 20.0,
-    description: "A comfortable cotton T-Shirt",
+    name: "Basket Ball",
+    price: 40.0,
+    description: "A comfortable ball for playing",
     imageUrl:
       "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?format=webp&w=480&dpr=1.0",
     category: "Clothing",
@@ -46,13 +46,13 @@ const products = [
   // Add 9 more products with unique names, descriptions, and imageUrls
   {
     id: 2,
-    name: "Coffee Mug",
+    name: "Coffee Brand",
     price: 15.0,
-    description: "A ceramic mug for your morning coffee",
+    description: "A ceramic and fantastic mug for your morning coffee",
     imageUrl:
       "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1707314527_4431294.jpg?format=webp&w=480&dpr=1.0",
     category: "Kitchen",
-    stock: 50,
+    stock: 60,
   },
   // ...
 ];
